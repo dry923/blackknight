@@ -5,8 +5,10 @@
     become: true
     roles:
       - role: repos
+        become: true
       - role: kvm
         tags: [drivers]
+        become: true
       - role: go
       - role: dep
       - role: kubectl
